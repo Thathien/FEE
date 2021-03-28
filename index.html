@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Boostrap/css/bootstrap.min.css">
+    <script src="Boostrap/jquery-3.6.0.min.js" type="text/javascript" ></script>
+    <script src="Boostrap/js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> -->
+    <link rel="stylesheet" href="Boostrap/js/bootstrap.min.js">
+    <link rel="stylesheet" href="Boostrap/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+       <div class="row " style="background-color:#6c757d;">
+           <p class="h5">Quiz Manager</p>
+       </div>
+        <div class="row">
+            <div class="col-md-5 border">
+                <div class="container">
+                    <div class="row border-bottom">
+                        <p class="h5">New Quetion</p>
+                    </div>
+                 </div>
+                <div class="container">
+                        <form action="" method="POST" role="form" id="formsibmit" style="background-color :#f8f9fa;" >
+                            <div class="cauhoi" style="background-color :#f8f9fa;">
+                                <div class="form-group " >
+                                    <label for="exampleFormControlTextarea1">Question</label>
+                                    <textarea class="form-control" id="duaracuahoi" rows="3" required></textarea>
+                                    <p class="text-danger cautraloi" ></p>
+                                  </div>
+    
+                                  <div class="form-check d-inline">
+                                    <input class="form-check-input d-inline" type="radio" name="exampleRadios" id="Singer" value="" checked>
+                                    <!-- <input class="form-check-input d-inline" type="radio" name="exampleRadios" id="exampleRadio2" value="" > -->
+                                    <label class="form-check-label" for="exampleRadios1">
+                                      Singer Choise
+                                    </label>
+                                  </div>
+                                  <div class="form-check d-inline">
+                                    <input class="form-check-input d-inline" type="radio" name="exampleRadios" id="Muti" value="" >
+                                   <label class="form-check-label" for="exampleRadios1">
+                                      Muti choise
+                                    </label>
+                                  </div>
+                                
+                                <div class="row float-right pt-4 pr-3">
+                                    <a type="submit" class="btn btn-primary" style="color: white;" id="addCH"><i class="fa fa-plus"></i> Add asnwer</a>
+                                </div>
+                            </div>
+                            <div class="question pt-5">
+                                <div class="form-group pt-4" >
+                                    
+                                    <div class="row">
+                                     <div class="col-md-6">
+                                        <label for="exampleFormControlTextarea1" >Answer <b class="ten">a</b></label>
+                                     </div>
+                                     <div class="col-md-6 float-right">
+                                        <div style="width: 1.5rem; height: 1.5rem;  " class="rounded-circle border float-right">
+                                            <a href="" class="float-right mr-1 mb-2 xoaCH" ><i class="fa fa-close" style="color: #dc3545;"></i></a>
+                                        </div>
+                                     </div>
+                                       
+                                    </div>
+
+                                    <textarea class="form-control " id="cautraloiA" rows="3" required></textarea>
+                                    <p class="text-danger cautraloi" ></p>
+                                </div>
+                                <div class="form-check d-inline">
+                                    <input class="form-check-input d-inline " type="checkbox" name="iscorect" id="iscorecta" value="option1">
+                                   <label class="form-check-label" for="exampleRadios1">
+                                      is corect anser
+                                    </label>
+                                  </div>    
+                            </div>
+                            <div class="question">
+                                <div class="form-group pt-4" >
+                                    <div class="row ">
+                                     <div class="col-md-6">
+                                        <label for="exampleFormControlTextarea1" >Answer <b  class="ten">b</b></label>
+                                     </div>
+                                     <div class="col-md-6 float-right">
+                                        <div style="width: 1.5rem; height: 1.5rem; " class="rounded-circle border float-right">
+                                            <a href="" class="float-right mr-1 mb-2 xoaCH"><i class="fa fa-close" style="color: #dc3545;"></i></a>
+                                        </div>
+                                     </div>
+                                       
+                                    </div>
+
+                                    <textarea class="form-control " id="cautraloiB" rows="3" required></textarea>
+                                    <p class="text-danger cautraloi" ></p>
+                                </div>
+                                <div class="form-check d-inline">
+                                    <input class="form-check-input d-inline" type="checkbox" name="iscorect" id="iscorectb" value="option1" >
+                                   <label class="form-check-label" for="exampleRadios1">
+                                      is corect anser
+                                    </label>
+                                  </div>    
+                                 
+                            </div>
+                            <div class="row float-right pt-4 pr-3 ">
+                                <button type="submit" class="btn btn-primary pr-2 " id="add-vaobang"> Add asnwer anh question</button>
+                                <a  class="btn btn-light border" id="huy"> Cancel</a>
+                            </div>
+                        </form>
+                </div>
+                
+            </div>
+            <div class="col-md-7">
+                <table class="table  table-striped" style="background-color: #ffffff;">
+                    <thead>
+                      <tr>
+                        <th >No</th>
+                        <th >Type</th>
+                        <th>Question</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody class="remove">
+                
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Singer choise</td>
+                            <td>What der HTML Stabd for ?</td>
+                            <td>
+                                <div style="width: 1.5rem; height: 1.5rem; " class="rounded-circle border float-right">
+                                    <a href="" class="float-right mr-1 mb-2 removetb"><i class="fa fa-close"></i></a>
+                                </div>
+                            </td>
+                          </tr>
+                        <tr>
+                            <td colspan="2" class="text-right"><b style="color: red;">a</b></td>
+                            <td colspan="2">hIPER TEXT LANGUGES</td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" class="text-right">b</td>
+                            <td colspan="2">hIPER TEXT LANGUGES</td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" class="text-right">c</td>
+                            <td colspan="2">hIPER TEXT LANGUGES</td>
+                          </tr>
+                    
+                
+                      
+                     
+                    </tbody>
+                    <tbody class="remove">
+                
+                      <tr>
+                          <th scope="row">1</th>
+                          <td>Singer choise</td>
+                          <td>What der HTML Stabd for ?</td>
+                          <td>
+                              <div style="width: 1.5rem; height: 1.5rem; " class="rounded-circle border float-right">
+                                  <a href="" class="float-right mr-1 mb-2 removetb"><i class="fa fa-close"></i></a>
+                              </div>
+                          </td>
+                        </tr>
+                      <tr>
+                          <td colspan="2" class="text-right"><b style="color: red;">a</b></td>
+                          <td colspan="2">hIPER TEXT LANGUGES</td>
+                        </tr>
+                        <tr>
+                          <td colspan="2" class="text-right">b</td>
+                          <td colspan="2">hIPER TEXT LANGUGES</td>
+                        </tr>
+                        <tr>
+                          <td colspan="2" class="text-right">c</td>
+                          <td colspan="2">hIPER TEXT LANGUGES</td>
+                        </tr>
+                  
+              
+                    
+                   
+                  </tbody>
+                  <tbody class="remove">
+                
+                    <tr class="row-tr">
+                        <th scope="row">1</th>
+                        <td>Singer choise</td>
+                        <td>What der HTML Stabd for ?</td>
+                        <td>
+                            <div style="width: 1.5rem; height: 1.5rem; " class="rounded-circle border float-right">
+                                <a href="" class="float-right mr-1 mb-2 removetb"><i class="fa fa-close"></i></a>
+                            </div>
+                        </td>
+                      </tr>
+                    <tr>
+                        <td colspan="2" class="text-right"><b style="color: red;">a</b></td>
+                        <td colspan="2">hIPER TEXT LANGUGES</td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" class="text-right">b</td>
+                        <td colspan="2">hIPER TEXT LANGUGES</td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" class="text-right">c</td>
+                        <td colspan="2">hIPER TEXT LANGUGES</td>
+                      </tr>
+                
+            
+                  
+                 
+                </tbody>
+                    <script src="index.js">
+                        
+                    </script>
+                  </table>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
